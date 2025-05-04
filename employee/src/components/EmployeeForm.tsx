@@ -4,7 +4,8 @@ import { AppDispatch } from "../store";
 import { createEmployee, updateEmployee } from "../store/employee/slice";
 import { Employee } from '../store/employee/types';
 import { calculateIRRF } from '../utils/calculations';
-import { UserIcon } from '@heroicons/react/24/outline'
+import { PencilIcon, UserIcon } from '@heroicons/react/24/outline'
+import toast from 'react-hot-toast';
 
 interface Props {
   existentEmployee?: Employee | null;
@@ -88,8 +89,21 @@ export default function EmployeeForm({ existentEmployee = null, onFinish }: Prop
         salarioBaseIR,
         descontoIRRF,
       }));
+
+      toast.success(
+        <div className="flex items-center">
+            <PencilIcon className="size-5 mr-2"/>
+            Funcionário atualizado com sucesso!
+        </div>
+      );
     } else {
       dispatch(createEmployee(payload));
+      toast.success(
+        <div className="flex items-center">
+            <PencilIcon className="size-5 mr-2"/>
+            Funcionário atualizado com sucesso!
+        </div>
+      );
     }
 
     if (!existentEmployee) {

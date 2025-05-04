@@ -6,6 +6,8 @@ import { Employee } from '../store/employee/types';
 import EditModal from './EditModal';
 import EmployeeForm from './EmployeeForm';
 import { useState } from "react";
+import toast from 'react-hot-toast';
+
 
 import { TrashIcon, PencilIcon } from '@heroicons/react/24/outline'
 import ConfirmDialog from "./ConfirmDialog";
@@ -26,6 +28,12 @@ export default function EmployeeTable() {
   const confirmEmployeeDelete = () => {
     if (idDelete) {
       dispatch(deleteEmployee(idDelete));
+      toast.success(
+        <div className="flex items-center">
+            <TrashIcon className="size-5 mr-2"/>
+            Funcionário excluído com sucesso!
+        </div>
+      );
     }
     setIdDelete(null);
     setConfirmDelete(false);
