@@ -6,7 +6,7 @@
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3-38B2AC?logo=tailwindcss)
 ![Redux](https://img.shields.io/badge/Redux_Toolkit-1.9.5-764ABC?logo=redux)
 
-> Projeto Front-end simples e eficiente para **cadastro, edição e gerenciamento de funcionários**, com cálculo automático de **IRRF**.
+> Este projeto é uma aplicação web para **cadastro, edição e gerenciamento de funcionários**, com cálculo automático de **IRRF** (Imposto de Renda Retido na Fonte) com base nas regras da Receita Federal.
 
 ---
 
