@@ -1,41 +1,65 @@
-# Sistema de Gestão de Funcionários com Cálculo de IRRF
+# Employee-React
+# 💼 Sistema de Gestão de Funcionários com Cálculo de IRRF
 
-Este projeto é uma aplicação web para cadastro e gerenciamento de funcionários, com cálculo automático do desconto de IRRF (Imposto de Renda Retido na Fonte).
+![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue?logo=typescript)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3-38B2AC?logo=tailwindcss)
+![Redux](https://img.shields.io/badge/Redux_Toolkit-1.9.5-764ABC?logo=redux)
+
+> Projeto Front-end simples e eficiente para **cadastro, edição e gerenciamento de funcionários**, com cálculo automático de **IRRF**.
+
+---
+
+## 📚 Índice
+
+- [🚀 Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [🧠 Funcionalidades](#-funcionalidades)
+- [💾 Persistência com localStorage](#-persistência-com-localstorage)
+- [🛠️ Como Rodar o Projeto](#️-como-rodar-o-projeto)
+
+---
 
 ## 🚀 Tecnologias Utilizadas
 
-- **React.js** (com Vite)
-- **TypeScript**
-- **Tailwind CSS**
-- **Redux Toolkit**
-- **localStorage**
+- ⚛️ **React.js** (com Vite)
+- 🟦 **TypeScript**
+- 🎨 **Tailwind CSS**
+- 🛠️ **Redux Toolkit**
+- 💿 **localStorage** (persistência)
+
+---
 
 ## 🧠 Funcionalidades
 
-- Cadastro, edição, listagem e exclusão de funcionários.
-- Cálculo automático do salário base para IRRF e o valor do IRRF com base:
-  - Salário Bruto
-  - Desconto de INSS
-  - Número de Dependentes
-- Filtros por nome e CPF.
-- Validação de campos.
-- Interface responsiva e moderna.
+- 📥 Cadastro de novos funcionários
+- ✏️ Edição de dados já existentes
+- ❌ Exclusão de funcionários
+- 📋 Listagem de todos os funcionários
+- 🔍 Filtro por **nome** ou **CPF**
+- 🧮 Cálculo automático do:
+  - Salário Base para IRRF
+  - Desconto de IRRF (de acordo com alíquotas oficiais)
+- ✅ Validação de campos obrigatórios
 
-## 💾 Persistência de Dados com Local Storage
+---
 
-Este projeto utiliza o **`localStorage`** do navegador para salvar os dados dos funcionários de forma local. Isso significa que:
+## 💾 Persistência com localStorage
 
-- As informações cadastradas (como nome, CPF, salário, etc.) são mantidas mesmo após recarregar a página ou fechar o navegador.
-- Não é necessário configurar banco de dados ou back-end para testes locais.
-- Os dados permanecem salvos até que o usuário os exclua manualmente (ou limpe o cache do navegador).
+Este projeto **salva os dados localmente** no navegador utilizando o `localStorage`, o que significa que:
 
+- Os dados persistem mesmo após recarregar a página ou fechar o navegador 🧠
+- Não há necessidade de configurar um banco de dados ou back-end
+
+---
 
 ## 🛠️ Como Rodar o Projeto
 
-1. **Clone o repositório:**
+### 1️⃣ Clone o repositório
 
 ```bash
 git clone https://github.com/GromRibeiro/Employee-React.git
+
+cd employee
 
 npm install
 npm run dev
