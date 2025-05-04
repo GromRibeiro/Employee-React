@@ -1,54 +1,43 @@
-# React + TypeScript + Vite
+# Sistema de Gestão de Funcionários com Cálculo de IRRF
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação web para cadastro e gerenciamento de funcionários, com cálculo automático do desconto de IRRF (Imposto de Renda Retido na Fonte).
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React.js** (com Vite)
+- **TypeScript**
+- **Tailwind CSS**
+- **Redux Toolkit**
+- **localStorage**
 
-## Expanding the ESLint configuration
+## 🧠 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Cadastro, edição, listagem e exclusão de funcionários.
+- Cálculo automático do salário base para IRRF e o valor do IRRF com base:
+  - Salário Bruto
+  - Desconto de INSS
+  - Número de Dependentes
+- Filtros por nome e CPF.
+- Validação de campos.
+- Interface responsiva e moderna.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 💾 Persistência de Dados com Local Storage
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Este projeto utiliza o **`localStorage`** do navegador para salvar os dados dos funcionários de forma local. Isso significa que:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- As informações cadastradas (como nome, CPF, salário, etc.) são mantidas mesmo após recarregar a página ou fechar o navegador.
+- Não é necessário configurar banco de dados ou back-end para testes locais.
+- Os dados permanecem salvos até que o usuário os exclua manualmente (ou limpe o cache do navegador).
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+
+## 🛠️ Como Rodar o Projeto
+
+1. **Clone o repositório:**
+
+```bash
+git clone https://github.com/GromRibeiro/Employee-React.git
+
+npm install
+npm run dev
+
+Acesse o projeto no navegador: http://localhost:5173
