@@ -54,7 +54,7 @@ Este projeto **salva os dados localmente** no navegador utilizando o `localStora
 
 ## 🛠️ Como Rodar o Projeto
 
-### 1️⃣ Clone o repositório
+### 1️⃣ Clone o repositório e inicie o projeto
 
 ```bash
 git clone https://github.com/GromRibeiro/Employee-React.git
